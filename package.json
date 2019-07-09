@@ -1,0 +1,23 @@
+{
+  "name": "css-sass-website",
+  "version": "1.0.0",
+  "description": "css and sass website",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/randeepkaur18/css-sass.git"
+  },
+  "author": "Randeep",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/randeepkaur18/css-sass/issues"
+  },
+  "homepage": "https://github.com/randeepkaur18/css-sass#readme",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  },
+  "dependencies": {}
+}
