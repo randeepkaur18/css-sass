@@ -1,0 +1,98 @@
+.form {
+
+    &__group:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    &__input {
+        display: block;
+        padding: 1.5rem 2rem;
+        font-size: 1.5rem;
+        font-family: inherit;
+        color: inherit;
+        width: 90%;
+        border-radius: 2px;
+        background-color: rgba($color-white, .5);
+        border: none;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black, .1);
+            border-bottom: 3px solid $color-green-primary;            
+        }
+
+        &:focus:invalid {
+            border-bottom: 3px solid $color-orange-light;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $color-dark-grey-2;
+        }
+
+    }
+
+    &__label {
+        display: block;
+        margin: .7rem 0 0 2rem;
+        transition: all .3s;
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+    /* 
+    * till placeholder is shown, hide the label
+    */
+    &__input:placeholder-shown + &__label { // '+' -> selects the adjacent sibling ( just next to it ). 
+        transform: translateY(-4rem);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &__radio-group {
+        display: inline-block;
+        width: 49%;
+    }
+
+    &__radio-input {
+        display: none;
+    }
+
+    &__radio-label {
+        font-size: $default-font-size;
+        cursor: pointer;
+        position: relative;
+        padding-left: 4.5rem;
+    }
+
+    &__radio-button {
+        height: 3rem;
+        width: 3rem;
+        border: 5px solid $color-green-primary;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        top: -.4rem;
+        left: 0;
+        
+
+        &::after {
+            content: "";
+            height: 1.3rem;
+            width: 1.3rem;
+            background-color: $color-green-primary;
+            border-radius: 50%;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity .2s;
+        }
+    }
+
+    &__radio-input:checked ~ &__radio-label &__radio-button::after {
+        opacity: 1;
+    }
+
+}
