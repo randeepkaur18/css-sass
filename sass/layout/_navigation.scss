@@ -117,10 +117,11 @@
 
         &::before { top: -.8rem }
         &::after { top: .8rem }
-        // we can use 'transform-origin' property to set the origin the transformation
+        // we can use 'transform-origin' property to set the origin of the transformation
 
     }
 
+    // ICON
     &__button:hover &__icon::before {
         top: -1rem;
     }
