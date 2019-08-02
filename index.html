@@ -77,12 +77,31 @@
                 </div>
                 <div class="col-1-of-2">
                     <div class="composition">
-                        <img src="img/nat-1-large.jpg" alt="Photo 1"
+
+                        <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 100w"
+                            sizes="(max-width: 56.25em), 20vw (max-width: 37.5em) 30vw, 300px"
+                            alt="Photo 1"
+                            class="composition__photo composition__photo--p1"
+                            src="img/nat-1-large.jpg">
+
+                        <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 100w"
+                            sizes="(max-width: 56.25em), 20vw (max-width: 37.5em) 30vw, 300px"
+                            alt="Photo 2"
+                            class="composition__photo composition__photo--p2"
+                            src="img/nat-2-large.jpg">
+
+                        <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 100w"
+                            sizes="(max-width: 56.25em), 20vw (max-width: 37.5em) 30vw, 300px"
+                            alt="Photo 3"
+                            class="composition__photo composition__photo--p3"
+                            src="img/nat-3-large.jpg">
+
+                        <!-- <img src="img/nat-1-large.jpg" alt="Photo 1"
                             class="composition__photo composition__photo--p1" />
                         <img src="img/nat-2-large.jpg" alt="Photo 2"
                             class="composition__photo composition__photo--p2" />
                         <img src="img/nat-3-large.jpg" alt="Photo 3"
-                            class="composition__photo composition__photo--p3" />
+                            class="composition__photo composition__photo--p3" /> -->
                     </div>
                 </div>
             </div>
@@ -345,8 +364,13 @@
     </main>
 
     <footer class="footer">
+
         <div class="footer__logo-box margin-bottom-large">
-            <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+            <picture class="footer__logo">
+                <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
+                    media="(max-width: 37.5em)">
+                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo">
+            </picture>
         </div>
         <div class="row">
             <div class="col-1-of-2">
@@ -362,7 +386,10 @@
             </div>
             <div class="col-1-of-2">
                 <div class="footer__copyright">
-                    Copyright &copy. <a href="#" class="footer__link">Natours website</a> based on <a href="#" class="footer__link">Advanced CSS and SASS Course</a> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolorum minima ad incidunt labore modi ducimus veritatis ex natus tenetur illum beatae assumenda optio, pariatur suscipit saepe quod maiores nemo?
+                    Copyright &copy. <a href="#" class="footer__link">Natours website</a> based on <a href="#"
+                        class="footer__link">Advanced CSS and SASS Course</a> Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Deserunt dolorum minima ad incidunt labore modi ducimus veritatis ex natus tenetur
+                    illum beatae assumenda optio, pariatur suscipit saepe quod maiores nemo?
                 </div>
             </div>
         </div>
@@ -377,11 +404,18 @@
             <div class="popup__right">
                 <a href="#section-tours" class="popup__close">&times;</a>
                 <h2 class="heading-secondary margin-bottom-small">Start Booking now</h2>
-                <h3 class="heading-tertiary margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
+                <h3 class="heading-tertiary margin-bottom-small">Important &ndash; Please read these terms before
+                    booking</h3>
                 <p class="popup__text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint facilis illum saepe, voluptate consequatur eaque minima assumenda culpa laborum labore optio non quasi doloribus temporibus aliquid nisi. Rem, consectetur placeat?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita modi quia incidunt cupiditate ipsum sit esse odit voluptate consectetur. Deserunt eius facilis doloremque aspernatur nesciunt fuga dignissimos quibusdam eligendi incidunt.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis recusandae debitis error repellendus, ratione expedita amet numquam commodi qui tempora nobis esse at rerum alias fugiat consequatur explicabo totam libero.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint facilis illum saepe, voluptate
+                    consequatur eaque minima assumenda culpa laborum labore optio non quasi doloribus temporibus aliquid
+                    nisi. Rem, consectetur placeat?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita modi quia incidunt cupiditate
+                    ipsum sit esse odit voluptate consectetur. Deserunt eius facilis doloremque aspernatur nesciunt fuga
+                    dignissimos quibusdam eligendi incidunt.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis recusandae debitis error
+                    repellendus, ratione expedita amet numquam commodi qui tempora nobis esse at rerum alias fugiat
+                    consequatur explicabo totam libero.
                 </p>
                 <a href="#" class="btn btn--green">Book Now</a>
             </div>

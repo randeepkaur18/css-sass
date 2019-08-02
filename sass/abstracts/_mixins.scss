@@ -32,6 +32,8 @@ $breakpoint argument choices:
 
 1rem = 16px
 
+ORDER: Base + typography > general layout + grid > page layout > component
+
 */
 
 @mixin respond($breakpoint) {
