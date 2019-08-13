@@ -37,3 +37,9 @@ body {
         padding: 0;
     }
 }
+
+// customize the selection of text in the whole website
+::selection {
+    background-color: $color-green-primary;
+    color: $color-white;
+}
