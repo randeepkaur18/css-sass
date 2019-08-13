@@ -12,6 +12,15 @@
     visibility: hidden;
     transition: all .3s;
 
+    // feature query
+    // If the browser supports backdrop-filter then only it will be applied otherwise not. 
+    @supports(-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba($color-black, .3);
+        // brightness is also a property to use.
+    }
+
     &__content {
         @include absoluteCenter;
 

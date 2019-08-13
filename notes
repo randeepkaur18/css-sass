@@ -14,4 +14,8 @@ For custom tranisition timing function
 - easings.net
 
 sizzy.co app to test application on real devices
----------------------------------------------
+------------------------------------------------
+
+Always check caniuse.com before using a modern css property in production.
+Use graceful Degradation with @support
+--------------------------------------------------------------------------

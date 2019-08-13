@@ -12,6 +12,8 @@
         top: 0;
         left: 0;
         width: 100%;
+        // always put the prefix version before actual version
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         border-radius: 3px;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
